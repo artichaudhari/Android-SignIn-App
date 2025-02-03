@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Sign in text centered at the top -->
+    <TextView
+        android:id="@+id/signInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:text="Sign in"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <!-- Username input field below the Sign in text -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInText"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Username"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/baseline_person_outline_24"
+        android:drawablePadding="10dp" />
+
+    <!-- Password input field below the Username field -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/baseline_password_24"
+        android:drawablePadding="10dp"
+        android:inputType="textPassword" />
+
+    <!-- Login button below the Password field -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Forgot Password text below the Login button -->
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Forgot password?"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <!-- Or sign in with text above the social icons -->
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgotPasswordText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:text="or sign in with"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <!-- Social media icons at the bottom -->
+    <LinearLayout
+        android:id="@+id/socialicons"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:layout_below="@+id/others"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:id="@+id/google_btn"
+            android:src="@drawable/google_icon" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/fbfb" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/x_icon" />
+    </LinearLayout>
+
+</RelativeLayout>
